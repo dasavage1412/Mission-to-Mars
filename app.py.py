@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# coding: utf-8
+ #coding: utf-8
 
 # In[2]:
 
@@ -40,14 +40,14 @@ def scrape():
    mars = mongo.db.mars
    mars_data = scraper.scrape_all()
    mars.update({}, mars_data, upsert=True)
-   return redirect('/', code=302)
+   return "Scraping Successful"
 
 
 # In[ ]:
 
 
 if __name__ == "__main__":
-   app.run()
+   app.run(debug=True)
 
 
 # In[ ]:
